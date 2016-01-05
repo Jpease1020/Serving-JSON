@@ -1,14 +1,15 @@
 class Api::V1::ItemsController < ApplicationController
   respond_to :json, :xml
 
-  before_action :authenticate!
+  # before_action :authenticate!
 
   def index
     respond_with Item.all
   end
 
   def show
-    respond_with Item.find_by(id: params[:id])
+    @item = Item.find_by(id: params[:id])
+    respond_with @item
   end
 
   def create
