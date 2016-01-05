@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'therubyracer'
 gem 'less-rails-bootstrap'
 gem 'bcrypt'
+gem 'active_model_serializers'
 
 
 group :development do
